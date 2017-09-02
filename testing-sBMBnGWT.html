@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                min-height: 100vh;
+                margin: 0;
+                width: 100vw;
+            }
+            .App__ ._MapView__ {
+                display: none;
+            }
+            .CardList__ {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            @media (min-width: 641px) {
+                .App__ ._ListView__ {
+                    width: 300px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    overflow-y: scroll;
+                }
+                .App__ ._MapView__ {
+                    width: calc(100% - 300px);
+                    left: 300px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    display: block;
+                }
+            }
+            .Card {
+                padding: 0.5rem 1rem;
+            }
+            .Card ._Title {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            dt {
+                font-weight: bold;
+            }
+            dd + dt {
+                margin-top: 0.5rem;
+            }
+            dd {
+                margin-left: 0;
+            }
+            .Icon {
+                width: 8px;
+                height: 8px;
+                transform: scale(2);
+                margin-right: 0.5em;
+                vertical-align: 0.2em;
+            }
+            .Card[data-is_expanded="false"] ._Expanded {
+                display: none;
+            }
+            .Card[data-is_expanded="true"] ._Expanded {
+                display: block;
+            }
+            .Card:not([data-is_expanded]) ._Collapsed {
+                display: none;
+            }
+            .Card[data-is_expanded="false"] ._Collapsed {
+                display: block;
+            }
+            .Card[data-is_expanded="true"] ._Collapsed {
+                display: none;
+            }
+            .Card ._Reports[data-is_expanded="false"] {
+                display: none;
+            }
+            .Card ._Reports[data-is_expanded="true"] {
+                display: block;
+            }
+        </style>
+        <style>
+            body {
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+            }
+            .CardList__ ._Card__ {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            .Card ._Updated {
+                padding-left: 0;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="App__">
+
+            <div class="_ListView__">
+
+                <ul class="Filter">
+                    <li>
+                        <button>All</button>
+                        <button>Power</button>
+                        <button>Food</button>
+                    </li>
+                </ul>
+
+                <ul class="CardList__">
+
+                    <li class="_Card__">
+                        <div class="Card">
+                            <h3 class="_Title">
+                                <svg class="Icon">
+                                    <use xlink:href="./open_iconic-1.1.0-min.svg#box"></use>
+                                </svg>
+                                <abbr title="Point Of Distribution">POD</abbr>
+                            </h3>
+                            <div class="_Collapsed">
+                                9th &amp; Jefferson
+                            </div>
+                            <div class="_Expanded">
+                                <dl class="_Info">
+                                    <dt>Address</dt>
+                                    <dd>9th &amp; Jefferson</dd>
+
+                                    <dt>Hours</dt>
+                                    <dd>1000–1600</dd>
+
+                                    <dt>Resources</dt>
+                                    <dd>
+                                        Bottled Water
+                                    </dd>
+                                    <dd>
+                                        Food
+                                        <span>(bread, canned soup)</span>
+                                    </dd>
+                                    <dd>
+                                        Hygiene Products
+                                    </dd>
+                                    <dd>
+                                        Baby Food
+                                    </dd>
+                                    <dd>
+                                        Diapers
+                                    </dd>
+
+                                    <dt>Notes</dt>
+                                    <dd>
+                                        Bring carts, bags, or backpacks to carry supplies back.
+                                    </dd>
+                                </dl>
+
+                                <button class="_Updated">
+                                    Updated <time datetime="2017-09-02T15:55:30Z" data-relative="true">2017-09-02T15:55:30Z</time>
+                                </button>
+                                <ol class="_Reports" reversed data-is_expanded="false">
+                                    <li>
+                                        City Hall: “Extended hours for POD on Jefferson St. at 9th Street: 10am to 4pm”
+                                    </li>
+                                    <li>
+                                        City Hall: “6 POD locations (10am-4pm): 76 Bloomfield St, 1st &amp; Jackson, 220 Adams, 5th &amp; Park, 9th &amp; Jefferson, Fox Hill (13th &amp; Willow). #Hoboken”
+                                        <a href="https://twitter.com/CityofHoboken/status/264733773856395265">@cityofhoboken &raquo;</a>
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="_Card__">
+                        <div class="Card">
+                            <h3 class="_Title">
+                                <svg class="Icon">
+                                    <use xlink:href="./open_iconic-1.1.0-min.svg#bolt"></use>
+                                </svg>
+                                Charging Station
+                            </h3>
+                            <div class="_Collapsed">
+                                9th &amp; Hudson
+                            </div>
+                            <div class="_Expanded">
+                                <dl class="_Info">
+                                    <dt>Address</dt>
+                                    <dd>9th &amp; Hudson</dd>
+
+                                    <dt>Hours</dt>
+                                    <dd>Unknown</dd>
+
+                                    <dt>Resources</dt>
+                                    <dd>
+                                        Battery Charging
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="_Card__">
+                        <div class="Card">
+                            <h3 class="_Title">
+                                <svg class="Icon">
+                                    <use xlink:href="./open_iconic-1.1.0-min.svg#home"></use>
+                                </svg>
+                                Shelter
+                            </h3>
+                            <div class="_Collapsed">
+                                Wallace School<br />
+                                1100 Willow Ave
+                            </div>
+                            <div class="_Expanded">
+                                <dl class="_Info">
+                                    <dt>Hours</dt>
+                                    <dd>24 hrs</dd>
+
+                                    <dt>Address</dt>
+                                    <dd>
+                                        Wallace School<br />
+                                        1100 Willow Ave
+                                    </dd>
+
+                                    <dt>Contact</dt>
+                                    <dd>+1 (201) 555-5555</dd>
+
+                                    <dt>Accepting People</dt>
+                                    <dd>Yes</dd>
+
+                                    <dt>Accepting Pets</dt>
+                                    <dd>No</dd>
+
+                                    <dt>Resources</dt>
+                                    <dd>
+                                        Battery Charging
+                                    </dd>
+                                    <dd>
+                                        Beds
+                                    </dd>
+                                    <dd>
+                                        Food
+                                    </dd>
+                                    <dd>
+                                        Restrooms
+                                    </dd>
+                                    <dd>
+                                        Water
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="_MapView__">
+            </div>
+
+
+        </div>
+
+        <script>
+            ;( () => {
+                const cl = document.querySelector('.CardList__')
+                cl.innerHTML = [0,1,2,3,4,5,6,7,8,9,10].map( i => cl.innerHTML ).join('')
+            })()
+        </script>
+
+        <script>
+            Array.from(document.querySelectorAll('.Card')).forEach( card => {
+                let is_expanded = false
+                function _render () {
+                    card.dataset.is_expanded = is_expanded
+                }
+                card.querySelector('._Title').addEventListener('click', e => {
+                    is_expanded = !is_expanded
+                    _render()
+                })
+                _render()
+            })
+        </script>
+
+    </body>
+</html>
